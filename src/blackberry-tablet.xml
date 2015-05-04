@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+    <id>com.kevinboone.kfile</id>
+    <filename>kfile</filename>
+    <name>KFile</name>
+    <versionNumber>1.0.1</versionNumber>
+    <description>Desktop-style file manager</description>
+    <copyright>2012</copyright>
+
+    <initialWindow>
+      <systemChrome>none</systemChrome>
+      <transparent>false</transparent>
+      <autoOrients>true</autoOrients>
+      <aspectRatio>landscape</aspectRatio>
+    </initialWindow>
+
+    <env var="QML_IMPORT_PATH" value="app/native/imports"/>
+    <env var="QT_PLUGIN_PATH" value="app/native/plugins"/>
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+
+    <publisher>Railway Terrace Software</publisher>
+    <permission system="true">run_native</permission>
+    <action>access_shared</action>
+    <icon><image>res/icon.png</image></icon>
+    <splashscreen>res/splashscreen.png</splashscreen>
+</qnx>
+
+
+

@@ -1,0 +1,268 @@
+<h1>KFile</h1>
+
+Version 1.0.1
+
+<h2>What is KFile?</h2>
+
+KFile is a desktop-style file manager for Blackberry Playbook running
+version 2.0 of the Blackberry operating system. It uses a multi-tab
+interface to allow files to be copied, moved, and deleted. Files can be
+searched for by filename, and opened using the standard Blackberry 
+applications. KFile also has a very simple text editor, because this is 
+something notably lacking in the BB platform.
+
+<h2>Tabs</h2>
+
+KFile uses multiple tabs. Tabs may contain file browsers, search results,
+or text files (including this manual). You can copy-and-paste files
+between file browser tabs showing different folders, or copy-and-paste
+text between different text editor tabs. 
+There is no limit, in principle,
+to the number of tabs that you can open. However, the user interface
+becomes difficult to navigate with more than three or four. The
+'Exit' button on the toolbar closes the current tab.
+<p/>
+To open a new file browser, select 'New-&gt;New browser' in any tab.  
+If you do this in a file browser tab, and a folder is currently highlighted,
+then the new browser will open in the highlighted folder. In all other
+cases it will open in the shared folder (see 'Shared folder' below).
+<p/>
+When the last tab closes, KFile will exit. Using the Settings dialog
+you can ask for closure of the last tab to be confirmed by the user, 
+to prevent exiting the program inadvertently.
+
+<h2>Browsing files</h2>
+
+The file browser shows files and folders, in alphabetical order of
+filename, with folders first. Double-tap a folder
+to show its contents; double-tap a file to open it (if it is
+of a recognized type). For both files and folders you can
+alternatively use the 'Open' button
+in the toolbar 
+-- the PlayBook is not particularly sensitive to double-tap events.
+The current folder is displayed
+in the caption at the top of the browser tab.
+<p/>
+File size, modification date, and permissions are displayed
+briefly in the status bar at the bottom of the screen whenever a
+file or folder is tapped.
+<p/>
+The file browser supports kinetic scrolling ('flick scrolling'),
+but the text editor does not, because it interferes with text 
+selection.
+
+<h2>Shared folder</h2>
+
+The 'Home' folder is the PlayBook shared folder. This is the 
+folder that contains the subfolders for  
+music, videos, etc. -- the same folder you see from a desktop computer
+when the PlayBook is connected via a USB cable. 
+You can get to this folder at
+any time by tapping the 'Home' button in any toolbar. 
+The shared folder, and its subfolders, are essentially the only place
+that applications can write data that other applications can see. 
+Most of the rest of the filesystem is either application-specific, or
+inaccessible to applications altogether.
+
+<h2>View mode</h2>
+
+Tapping the 'View' button on the browser toolbar cycles between the
+various display modes -- list, grid with small icons, grid with
+large icons. 
+
+<h2>Creating files and folders</h2>
+
+In the file browser, use 'New-&gt;New file' or 'New-&gt;New folder',
+and enter a name. An empty file or directory will be created in
+the current folder. Because none of the built-in Playbook applications
+will handle an empty file of any type, the only real use for
+creating a new file is to start a new text document for use with the
+KFile built-in text editor.
+<p/>
+If you want to start a new text document, be sure to include the
+extension '.txt' in the name.
+
+<h2>Renaming files and folders</h2>
+
+To rename, use the 'Edit-&gt;Rename'. Only one file or folder can be
+renamed at a time; an error message is display if more than one
+file or folder is selected.
+
+<h2>Deleting files and folders</h2>
+
+Select the file(s) to delete, and tap 'Edit-&gt;lDelete'. Please note
+that if the selection includes folders, all the folders' contents
+will be deleted. Please note also that this operation is irreversible. 
+
+<h2>Copying and moving files</h2>
+
+Copying and moving files uses a cut-and-paste metaphor. In the file
+browser or search results tabs, select the files or folders to copy 
+or move, and tap
+'Edit-&gt;Copy' or 'Edit-&gt;Cut'. Then find the destination folder --
+either in the same file browser tab or a different one -- and 
+tap 'Edit-&gt;Paste'. A progress dialog is displayed during the
+copy or move operation. By default, moving files requires you
+to confirm the operation, but copying does not (since it is not
+destructive of the original files). These confirmation preferences
+can be changed using the Settings dialog.
+<p/>
+If the selection includes folders, then the folders and all their
+contents will be copied or moved.
+You can cancel a long copy or move operation using the 'Stop' button
+on the progress dialog.
+<p/>
+
+
+<h2>Searching for files</h2>
+
+Click the 'Search' button in the file browser window. The search will
+include filenames whose names include the search term -- you don't have
+to specify wildcards to match part of a name -- and is case-insensitive.
+The search starts in the
+folder currently shown in the browser -- clicking a folder name
+by itself won't change the search start point. You can cancel the search
+using the 'Stop' button in the progress dialog, and any matches
+found so far will be left in place. Note that the number in the 
+progress bar will not be meaningful -- KFile doesn't actually know
+how many filenames need to be searched without actually searching them. 
+<p/>
+In the search results window, file paths are shown relative to the 
+folder in which the search started. Showing the path this way is a 
+compromise between showing just the filename -- which would be confusing
+if there are matches in multiple directories -- and showing the full
+path -- which would likely take up too much room on screen.
+<p/>
+You can copy files from the search results window. In this case, the
+copy will not include any path information -- the file will be 
+created in whatever folder is visible when you do the paste. 
+
+<h2>Text editor</h2>
+
+The text editor is very simple -- it can edit plain text files and
+provides rudimentary cut/paste/copy operations.
+<p/>
+The text editor will be invoked whenever you select a file from
+the browser whose name ends in <code>.txt</code>. You may have
+other software installed that can read text files, but the 
+Blackberry OS will not allow KFile to launch it; so automatically 
+launching the built-in text editor is the only thing KFile can do.
+<p/>
+The built-in text editor is intended for small files; KFile will
+attempt to load the entire file into memory for editing. 
+
+<h2>Thumbnail support</h2>
+
+The KFile browser tabs can display embedded thumbnails from JPEG
+images. Most images captured by digital cameras have these thumbnails
+embedded. KFile won't attempt to generate a thumbnail from an image that
+doesn't have one, because it takes too long and uses a lot of memory.
+It can be time consuming even to process embedded thumbnails if there
+are hundreds of images in a single folder, so this feature can 
+be turned off in the Settings dialog.
+
+<h2>ZIP file support</h2>
+
+KFile does not have built-in ZIP file extraction support, because this is now
+provided natively by the PlayBook OS. Opening a .zip file will cause
+the archive to be expanded into a directory whose name is the same as that
+of the .zip file. It will also launch the built-in file browser --
+this is an unavoidable side-effect of the process, where or not the
+ZIP file contains any documents that the built-in browser understands.
+
+<h2>Appearance</h2>
+
+KFile has basic dark-screen and light-screen skins, which can be
+selected from the Settings menu. The light screen looks more
+desktop-like, but the dark screen will have slightly less impact
+on battery life.
+
+<h2>Limitations</h2>
+
+The Blackberry operating system has some significant limitations, which 
+make it impossible to implement true, desktop-style functionality. 
+There are a number of other limitations which result from the way that
+KFile is implemented, or from the Qt library which provides its 
+user interface.
+<p/>
+1. It is not possible to launch applications other than the built-in
+BB utilities. For example, if you have an EPUB book reader installed, it
+would be nice to be able to launch it it if you select an EPUB file 
+from the browser.  With the current BB OS, this is impossible. Support for
+generic launching is supposed to be coming in the next generation 
+of the BlackBerry OS.
+<p/>
+2. Similarly, you can't change which application is launched for a specific
+file type. MP3 files will always be opened by the built-in media player, even
+if you have installed another media; the
+BB platform does not provide any configuration for this.
+<p/>
+3. You can't run multiple files. KFile allows a bunch of different files
+to be selected, but other than cut/copy/delete you can't do anything
+with the selection, and KFile will display an error message if you try. 
+You can't, for example, send a number of MP3 files to the
+media player to form a playlist -- only one file at a time can be played. 
+Again, this is
+a limitation of the BB platform.
+<p/>
+4. The text editor saves files using the default unicode encoding of the device 
+-- in practice that always seems to be UTF-8.
+<p/>
+5. When files are moved using cut-and-paste, they are actually renamed
+at the operating system level, rather than being copied and then deleted
+from their original locations. 
+This (rename) is hugely faster than copy-and-delete, but probably won't 
+work across different filesystems. In practice, this does not seem
+to be a problem. 
+<p/>
+6. At present, when problems are encountered when copying or moving files,
+a 'Do you want to continue?' prompt is given each time. This can make it
+inconvenient to do things where you might expect many such warnings, such as
+merging the contents of one directory tree with another.
+<p/>
+7. Files can only be copied from one directory to another -- KFile won't
+automatically rename files so that you can clone them in the same directory.
+<p/>
+8. The Blackberry OS prevents one application seeing the files of
+another, even the executables. KFile does not -- indeed can not -- circumvent
+the basic security of the platform. KFile does not limit the user
+to browsing the standard shared directory but, outside of this directory,
+an awful lot of the filesystem is inaccessible either for reading
+or writing.
+<p/>
+9. Cancelling a file copy operation can be quite slow.  
+<p/>
+10. The KFile screen will rotate automatically if you rotate the tablet, but 
+some of the toolbars don't fit properly in portrait mode.
+<p/>
+11. KFile does not distinguish between symbolic links and the files they 
+reference. You can't, for example, delete a link to a file, without deleting
+the file itself. 
+
+<h2>Legal and disclaimer</h2>
+
+KFile is provided free of charge in the hope the it will be useful.
+Naturally, a tool that can delete entire folder trees is potentially
+dangerous; this is a risk that the user must bear.
+There is no warranty of any kind.
+<p/>
+KFile was written by Kevin Boone, and incorporates open-source components
+from many other authors. The implementation of KFile is 
+copyright &copy;2012 Railway Terrace
+Software.
+Please feel free to distribute KFile or use it in any way you find helpful.
+Source code may be made available at some point, depending on demand.
+<p/>
+KFile uses the Qt user interface library, which is copyright &copy;2102
+Nokia Corporation and others. Qt is an open-source project, and 
+is distributed according to
+the terms of the GNU Lesser Public Licence. 
+Source code for the open-source parts of KFile is available as a legal 
+condition
+of their use. However, this code is all widley available on the Internet.
+
+
+
+
+
+
