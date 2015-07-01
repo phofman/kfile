@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{a17d3b96-6843-4098-8a8e-3a290bafeeb5}</UniqueIdentifier>
+      <Extensions>qml;js;qmljs;jpg;png;gif;bmp;ico;amd;wav;mp3;mp4</Extensions>
+    </Filter>
+    <Filter Include="Config Files">
+      <UniqueIdentifier>{43765178-0a92-4175-bbb9-90144db5c7d7}</UniqueIdentifier>
+      <Extensions>pri;pro;mk;properties;project;cproject;xml;xsd;bat;cmd;ps;ps1</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{fc0616f7-723f-401b-ac0b-af1e5d829234}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;asm;h;hpp;hxx;hm;def;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Translations">
+      <UniqueIdentifier>{263b5436-e6db-4ba8-b29a-68a2d0df223b}</UniqueIdentifier>
+      <Extensions>ts;qm</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bar-descriptor.xml">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
