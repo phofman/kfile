@@ -1,12 +1,13 @@
 #pragma once
 
+#include <QtCore/QString>
+
 class KFileDialogs
-  {
-  public:
+{
+public:
 
-  static void error (const QString &message, QWidget *parent = 0);
-  static void message (const QString &message, QWidget *parent = 0);
-
-  };
+    static void error(const QString &message, QWidget *parent = 0);
+    static void message(const QString &message, QWidget *parent = 0);
+};
 
 

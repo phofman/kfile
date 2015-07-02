@@ -1,86 +1,85 @@
 #pragma once
+
 #include <QObject>
-#include <QWidget>
-#include <QProgressDialog>
-#include <QListWidget>
-#include <QIcon>
+#include <QtGui/QWidget>
+#include <QtGui/QProgressDialog>
+#include <QtGui/QListWidget>
+#include <QtGui/QIcon>
 #include "kineticscroller.h"
 
 typedef enum
-  {
-  FCAT_UNKNOWN = 0,
-  FCAT_COMPRESSED,
-  FCAT_MEDIA_AUDIO,
-  FCAT_MEDIA_VIDEO,
-  FCAT_DOC_PDF,
-  FCAT_DOC_OFFICE,
-  FCAT_MEDIA_EBOOK,
-  FCAT_DOC_HTML,
-  FCAT_DOC_TXT,
-  FCAT_MEDIA_IMAGE
-  } KFileCategory;
+{
+    FCAT_UNKNOWN = 0,
+    FCAT_COMPRESSED,
+    FCAT_MEDIA_AUDIO,
+    FCAT_MEDIA_VIDEO,
+    FCAT_DOC_PDF,
+    FCAT_DOC_OFFICE,
+    FCAT_MEDIA_EBOOK,
+    FCAT_DOC_HTML,
+    FCAT_DOC_TXT,
+    FCAT_MEDIA_IMAGE
+} KFileCategory;
 
 class KFileWidget : public QWidget
-  {
-  Q_OBJECT
+{
+    Q_OBJECT
 
-  public:
+public:
 
-   typedef enum 
-     {
-     List = 0,
-     GridSmallIcons,
-     GridLargeIcons,
-     NumViewModes
-     } ViewMode;
+    typedef enum
+    {
+        List = 0,
+        GridSmallIcons,
+        GridLargeIcons,
+        NumViewModes
+    } ViewMode;
 
-    ~KFileWidget (void);
-    KFileWidget (const QString &path, QWidget *parent); 
-    static KFileCategory classifyFileByName (const QString &fileName);
-    QStringList getSelectedItems (void) const;
-    void notifyPathDeleted (const QString &pathName);
-    virtual void refresh (void) = 0;
+    ~KFileWidget(void);
+    KFileWidget(const QString &path, QWidget *parent);
+    static KFileCategory classifyFileByName(const QString &fileName);
+    QStringList getSelectedItems(void) const;
+    void notifyPathDeleted(const QString &pathName);
+    virtual void refresh(void) = 0;
 
-  signals:
+signals:
 
-    void pathDeleted (const QString &path); 
-    void statusUpdate (const QString &text); 
-    void openFilesRequested (const QStringList &fileNames);
-    void settingsRequested (void);
-    void aboutRequested (void);
-    void manualRequested (void);
-    void dirContentsChanged (void); 
+    void pathDeleted(const QString &path);
+    void statusUpdate(const QString &text);
+    void openFilesRequested(const QStringList &fileNames);
+    void settingsRequested(void);
+    void aboutRequested(void);
+    void manualRequested(void);
+    void dirContentsChanged(void);
 
-  protected slots:
+    protected slots:
 
-    void handleOpenAction (void);
-    void handleDeleteAction (void);
-    void itemDoubleClicked (QListWidgetItem * item);
-    void itemActivated (QListWidgetItem * item);
-    void handleCopyAction (void);
-    void handleCutAction (void);
-    void handleSettingsAction (void);
-    void handleManualAction (void);
-    void handleAboutAction (void);
-    void handleSelectAllAction (void);
-    void handleSelectNoneAction (void);
-    void toggleViewMode (void);
-    void setViewMode (ViewMode viewMode);
- 
-  protected:
+    void handleOpenAction(void);
+    void handleDeleteAction(void);
+    void itemDoubleClicked(QListWidgetItem * item);
+    void itemActivated(QListWidgetItem * item);
+    void handleCopyAction(void);
+    void handleCutAction(void);
+    void handleSettingsAction(void);
+    void handleManualAction(void);
+    void handleAboutAction(void);
+    void handleSelectAllAction(void);
+    void handleSelectNoneAction(void);
+    void toggleViewMode(void);
+    void setViewMode(ViewMode viewMode);
 
-    virtual void openSingleDir (const QString &dirName)  = 0;
-    void openFilesOrDirs (const QStringList &fileNames);
+protected:
+
+    virtual void openSingleDir(const QString &dirName) = 0;
+    void openFilesOrDirs(const QStringList &fileNames);
     void createIcons();
     void deleteIcons();
-    void error (const QString &message, QWidget *parent = 0);
-    void message (const QString &message, QWidget *parent = 0);
-    const QIcon &getIconForFile (const QString &fileName);
-    QStringList expandNames (const QString &root, const QStringList &names, 
-      bool *cancelled, bool dirBeforeFiles);
-    QStringList _expandNames (const QString &root, const QString &path, 
-      QProgressDialog *progress, bool dirBeforeFiles);
-    bool deleteFileOrDir (const QString &filename);
+    void error(const QString &message, QWidget *parent = 0);
+    void message(const QString &message, QWidget *parent = 0);
+    const QIcon &getIconForFile(const QString &fileName);
+    QStringList expandNames(const QString &root, const QStringList &names, bool *cancelled, bool dirBeforeFiles);
+    QStringList _expandNames(const QString &root, const QString &path, QProgressDialog *progress, bool dirBeforeFiles);
+    bool deleteFileOrDir(const QString &filename);
 
     QListWidget *list;
     QString path;
@@ -91,15 +90,15 @@ class KFileWidget : public QWidget
     QIcon *openIcon;
     QIcon *upIcon;
     QIcon *homeIcon;
-    QIcon *viewIcon; 
-    QIcon *newBrowserIcon; 
-    QIcon *newFileIcon; 
-    QIcon *newDirIcon; 
-    QIcon *deleteIcon; 
-    QIcon *cutIcon; 
-    QIcon *copyIcon; 
-    QIcon *pasteIcon; 
-    QIcon *refreshIcon; 
+    QIcon *viewIcon;
+    QIcon *newBrowserIcon;
+    QIcon *newFileIcon;
+    QIcon *newDirIcon;
+    QIcon *deleteIcon;
+    QIcon *cutIcon;
+    QIcon *copyIcon;
+    QIcon *pasteIcon;
+    QIcon *refreshIcon;
     QIcon *audioIcon;
     QIcon *videoIcon;
     QIcon *pdfIcon;
@@ -120,6 +119,6 @@ class KFileWidget : public QWidget
     bool pasteByNameOnly;
     ViewMode viewMode;
     KineticScroller *kineticScroller;
-  };
+};
 
 

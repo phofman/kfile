@@ -3,4 +3,13 @@
 FileManager.opensdf
 FileManager.sdf
 FileManager.v12.suo
+FileManager.vcxproj.user
+
+# temporary and final build outcomes
+Device-Debug/
+QtLibs/
+vsndk-compile-ran.flag
+
+# NuGet packages
+packages/
 

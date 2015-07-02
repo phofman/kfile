@@ -17,16 +17,181 @@
       <UniqueIdentifier>{263b5436-e6db-4ba8-b29a-68a2d0df223b}</UniqueIdentifier>
       <Extensions>ts;qm</Extensions>
     </Filter>
+    <Filter Include="QtLibs">
+      <UniqueIdentifier>{56595ad0-0168-4aa1-9384-c863520b860a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\x86">
+      <UniqueIdentifier>{f39140c3-cf6e-4d1a-89a7-acaf08fef35e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\x86\platforms">
+      <UniqueIdentifier>{aed605f0-9d0e-486c-8fdf-8e47ea6fe18f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\armle-v7">
+      <UniqueIdentifier>{15082c2f-405d-4423-ae06-a3a913c9b99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\armle-v7\platforms">
+      <UniqueIdentifier>{619be5aa-ed34-47a6-bd59-eeb4dbe53aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\moc">
+      <UniqueIdentifier>{df0283a7-90e1-4cba-8c84-36ba9fea690a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="bar-descriptor.xml">
       <Filter>Config Files</Filter>
     </None>
     <None Include="README.txt" />
+    <None Include="QtLibs\x86\platforms\libblackberry.so">
+      <Filter>QtLibs\x86\platforms</Filter>
+    </None>
+    <None Include="QtLibs\x86\libQtOpenGL.so">
+      <Filter>QtLibs\x86</Filter>
+    </None>
+    <None Include="QtLibs\x86\libQtGui.so">
+      <Filter>QtLibs\x86</Filter>
+    </None>
+    <None Include="QtLibs\x86\libQtCore.so">
+      <Filter>QtLibs\x86</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\platforms\libblackberry.so">
+      <Filter>QtLibs\armle-v7\platforms</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtOpenGL.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtGui.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtCore.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtXmlPatterns.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtSvg.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtSql.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtScript.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtNetwork.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtMultimedia.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtDeclarative.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\fileclipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jpegthumbnailfetcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfilebrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfiledialogs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfileinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfilelist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfilesettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfilesettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kfilewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kineticscroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ktexteditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kfilebrowser.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kfilelist.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kfilesettingsdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kfilestyle.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kfilewidget.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_kineticscroller.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_ktexteditor.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc_mainwindow.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fileclipboard.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jpegthumbnailfetcher.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilebrowser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfiledialogs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfileinfo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilelist.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilesettings.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilesettingsdialog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilestyle.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kfilewidget.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kineticscroller.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ktexteditor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mainwindow.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

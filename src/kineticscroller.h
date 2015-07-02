@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QObject>
-#include <QScopedPointer>
+#include <QtCore/QObject>
+
 class KineticScrollerImpl;
 class QAbstractScrollArea;
 class QEvent;

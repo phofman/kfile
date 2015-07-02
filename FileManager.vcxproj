@@ -26,22 +26,91 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup>
+    <NuGetPackageImportStamp>eb3baeb6</NuGetPackageImportStamp>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|BlackBerry'">
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|BlackBerry'">
+    <Link>
+      <AdditionalDependencies>bps;m;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-Wno-psabi %(AdditionalOptions)</AdditionalOptions>
+      <UndefinePreprocessorDefinitions>WIN32;_WINDOWS;QT_BOOTSTRAPPED</UndefinePreprocessorDefinitions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="bar-descriptor.xml" />
+    <None Include="bar-descriptor.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="QtLibs\armle-v7\libQtCore.so" />
+    <None Include="QtLibs\armle-v7\libQtDeclarative.so" />
+    <None Include="QtLibs\armle-v7\libQtGui.so" />
+    <None Include="QtLibs\armle-v7\libQtMultimedia.so" />
+    <None Include="QtLibs\armle-v7\libQtNetwork.so" />
+    <None Include="QtLibs\armle-v7\libQtOpenGL.so" />
+    <None Include="QtLibs\armle-v7\libQtScript.so" />
+    <None Include="QtLibs\armle-v7\libQtSql.so" />
+    <None Include="QtLibs\armle-v7\libQtSvg.so" />
+    <None Include="QtLibs\armle-v7\libQtXmlPatterns.so" />
+    <None Include="QtLibs\armle-v7\platforms\libblackberry.so" />
+    <None Include="QtLibs\x86\libQtCore.so" />
+    <None Include="QtLibs\x86\libQtGui.so" />
+    <None Include="QtLibs\x86\libQtOpenGL.so" />
+    <None Include="QtLibs\x86\platforms\libblackberry.so" />
     <None Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\fileclipboard.cpp" />
+    <ClCompile Include="src\jpegthumbnailfetcher.cpp" />
+    <ClCompile Include="src\kfilebrowser.cpp" />
+    <ClCompile Include="src\kfiledialogs.cpp" />
+    <ClCompile Include="src\kfileinfo.cpp" />
+    <ClCompile Include="src\kfilelist.cpp" />
+    <ClCompile Include="src\kfilesettings.cpp" />
+    <ClCompile Include="src\kfilesettingsdialog.cpp" />
+    <ClCompile Include="src\kfilewidget.cpp" />
+    <ClCompile Include="src\kineticscroller.cpp" />
+    <ClCompile Include="src\ktexteditor.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mainwindow.cpp" />
+    <ClCompile Include="src\moc_kfilebrowser.cpp" />
+    <ClCompile Include="src\moc_kfilelist.cpp" />
+    <ClCompile Include="src\moc_kfilesettingsdialog.cpp" />
+    <ClCompile Include="src\moc_kfilestyle.cpp" />
+    <ClCompile Include="src\moc_kfilewidget.cpp" />
+    <ClCompile Include="src\moc_kineticscroller.cpp" />
+    <ClCompile Include="src\moc_ktexteditor.cpp" />
+    <ClCompile Include="src\moc_mainwindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fileclipboard.h" />
+    <ClInclude Include="src\jpegthumbnailfetcher.h" />
+    <ClInclude Include="src\kfilebrowser.h" />
+    <ClInclude Include="src\kfiledialogs.h" />
+    <ClInclude Include="src\kfileinfo.h" />
+    <ClInclude Include="src\kfilelist.h" />
+    <ClInclude Include="src\kfilesettings.h" />
+    <ClInclude Include="src\kfilesettingsdialog.h" />
+    <ClInclude Include="src\kfilestyle.h" />
+    <ClInclude Include="src\kfilewidget.h" />
+    <ClInclude Include="src\kineticscroller.h" />
+    <ClInclude Include="src\ktexteditor.h" />
+    <ClInclude Include="src\mainwindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets" Condition="Exists('packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets'))" />
+  </Target>
 </Project>

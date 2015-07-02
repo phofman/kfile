@@ -1,14 +1,15 @@
 #pragma once
 
-#include <QObject>
-#include <QWidget>
-#include <QDialog>
-#include <QDialogButtonBox>
-#include <QGroupBox>
-#include <QRadioButton>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QCheckBox>
+#include <QtCore/QObject>
+#include <QtGui/QWidget>
+#include <QtGui/QDialog>
+#include <QtGui/QDialogButtonBox>
+#include <QtGui/QGroupBox>
+#include <QtGui/QRadioButton>
+#include <QtGui/QVBoxLayout>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QCheckBox>
+
 #include "kfilesettings.h"
 
 class KFileSettingsDialog : public QDialog

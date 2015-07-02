@@ -1,28 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <qnx xmlns="http://www.qnx.com/schemas/application/1.0">
-    <id>com.kevinboone.kfile</id>
-    <filename>kfile</filename>
-    <name>KFile</name>
-    <versionNumber>1.0.1</versionNumber>
-    <description>Desktop-style file manager</description>
-    <copyright>2012</copyright>
+  <id>com.kevinboone.kfile</id>
+  <filename>kfile</filename>
+  <name>KFile</name>
+  <versionNumber>1.0.1</versionNumber>
+  <description>Desktop-style file manager</description>
+  <copyright>2012</copyright>
 
-    <initialWindow>
-      <systemChrome>none</systemChrome>
-      <transparent>false</transparent>
-      <autoOrients>true</autoOrients>
-      <aspectRatio>landscape</aspectRatio>
-    </initialWindow>
+  <initialWindow>
+    <systemChrome>none</systemChrome>
+    <transparent>false</transparent>
+    <autoOrients>true</autoOrients>
+    <aspectRatio>landscape</aspectRatio>
+  </initialWindow>
 
-    <env var="QML_IMPORT_PATH" value="app/native/imports"/>
-    <env var="QT_PLUGIN_PATH" value="app/native/plugins"/>
-    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+  <publisher>Railway Terrace Software</publisher>
+  <permission system="true">run_native</permission>
+  <action>access_shared</action>
+  
+  <icon>
+    <image>res/icon.png</image>
+  </icon>
+  <splashscreen>res/splashscreen.png</splashscreen>
 
-    <publisher>Railway Terrace Software</publisher>
-    <permission system="true">run_native</permission>
-    <action>access_shared</action>
-    <icon><image>res/icon.png</image></icon>
-    <splashscreen>res/splashscreen.png</splashscreen>
+  <configuration name="Device-Debug">
+    <platformArchitecture>armle-v7</platformArchitecture>
+    <asset path="Device-Debug/FileManager" entry="true" type="Qnx/Elf">CascadesListViewApp1</asset>
+    <asset path="QtLibs/armle-v7/libQtCore.so" type="Qnx/Elf">lib/libQtCore.so.4</asset>
+    <asset path="QtLibs/armle-v7/libQtGui.so" type="Qnx/Elf">lib/libQtGui.so.4</asset>
+    <asset path="QtLibs/armle-v7/libQtOpenGL.so" type="Qnx/Elf">lib/libQtOpenGL.so.4</asset>
+    <asset path="QtLibs/armle-v7/platforms/libblackberry.so" type="Qnx/Elf">lib/platforms/libblackberry.so</asset>
+  </configuration>
+  <configuration name="Device-Release">
+    <platformArchitecture>armle-v7</platformArchitecture>
+    <entryPointType>Qnx/Cascades</entryPointType>
+    <asset path="Device-Release/FileManager" entry="true" type="Qnx/Cascades">CascadesListViewApp1.so</asset>
+    <asset path="QtLibs/armle-v7/libQtCore.so" type="Qnx/Elf">lib/libQtCore.so.4</asset>
+    <asset path="QtLibs/armle-v7/libQtGui.so" type="Qnx/Elf">lib/libQtGui.so.4</asset>
+    <asset path="QtLibs/armle-v7/libQtOpenGL.so" type="Qnx/Elf">lib/libQtOpenGL.so.4</asset>
+    <asset path="QtLibs/armle-v7/platforms/libblackberry.so" type="Qnx/Elf">lib/platforms/libblackberry.so</asset>
+  </configuration>
+  <configuration name="Simulator-Debug">
+    <platformArchitecture>x86</platformArchitecture>
+    <asset path="Simulator-Debug/FileManager" entry="true" type="Qnx/Elf">CascadesListViewApp1</asset>
+    <asset path="QtLibs/x86/libQtCore.so" type="Qnx/Elf">lib/libQtCore.so.4</asset>
+    <asset path="QtLibs/x86/libQtGui.so" type="Qnx/Elf">lib/libQtGui.so.4</asset>
+    <asset path="QtLibs/x86/libQtOpenGL.so" type="Qnx/Elf">lib/libQtOpenGL.so.4</asset>
+    <asset path="QtLibs/x86/platforms/libblackberry.so" type="Qnx/Elf">lib/platforms/libblackberry.so</asset>
+  </configuration>
+  
+  <!-- Folder with QML, HTML files and images -->
+  <asset path="assets/res">res</asset>
+  
+  <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+  <env var="QML_IMPORT_PATH" value="app/native/imports"/>
+  <env var="QT_PLUGIN_PATH" value="app/native/plugins"/>
+  <env var="QT_QPA_FONTDIR" value="/usr/fonts/font_repository/monotype"/>
+  
 </qnx>
 
 
