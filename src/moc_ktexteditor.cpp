@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ktexteditor.h'
 **
-** Created: Mon Sep 24 15:00:36 2012
+** Created: Thu 2. Jul 03:30:47 2015
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!
