@@ -27,7 +27,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <NuGetPackageImportStamp>e896a605</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>2a819616</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|BlackBerry'">
     <ClCompile>
@@ -38,6 +38,7 @@
     <Link>
       <AdditionalDependencies>bps;m;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile />
     <ClCompile>
       <AdditionalOptions>-Wno-psabi %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -47,6 +48,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="QtLibs\armle-v7\libQtCore.so" />
+    <None Include="QtLibs\armle-v7\libQtGui.so" />
     <None Include="QtLibs\armle-v7\libQtOpenGL.so" />
     <None Include="QtLibs\armle-v7\platforms\libblackberry.so" />
     <None Include="QtLibs\x86\libQtCore.so" />
@@ -95,12 +98,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets" Condition="Exists('packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets')" />
+    <Import Project="packages\codetitans-playbook-qt4-core.1.0.3\build\native\codetitans-playbook-qt4-core.targets" Condition="Exists('packages\codetitans-playbook-qt4-core.1.0.3\build\native\codetitans-playbook-qt4-core.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\codetitans-playbook-qt4-core.1.0.2\build\native\codetitans-playbook-qt4-core.targets'))" />
+    <Error Condition="!Exists('packages\codetitans-playbook-qt4-core.1.0.3\build\native\codetitans-playbook-qt4-core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\codetitans-playbook-qt4-core.1.0.3\build\native\codetitans-playbook-qt4-core.targets'))" />
   </Target>
 </Project>

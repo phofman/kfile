@@ -17,23 +17,23 @@
       <UniqueIdentifier>{263b5436-e6db-4ba8-b29a-68a2d0df223b}</UniqueIdentifier>
       <Extensions>ts;qm</Extensions>
     </Filter>
-    <Filter Include="QtLibs">
-      <UniqueIdentifier>{56595ad0-0168-4aa1-9384-c863520b860a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\moc">
       <UniqueIdentifier>{df0283a7-90e1-4cba-8c84-36ba9fea690a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QtLibs">
+      <UniqueIdentifier>{e44d54ad-a73e-42f8-8eb7-bafe329eb1ee}</UniqueIdentifier>
+    </Filter>
     <Filter Include="QtLibs\x86">
-      <UniqueIdentifier>{52bafd46-eb58-4ae0-998e-7055429f2c96}</UniqueIdentifier>
+      <UniqueIdentifier>{39d0ed09-0686-4920-8fc8-30361aef27ae}</UniqueIdentifier>
     </Filter>
     <Filter Include="QtLibs\x86\platforms">
-      <UniqueIdentifier>{d0ffc04d-222c-4eb0-bd6a-92085e0cdf21}</UniqueIdentifier>
+      <UniqueIdentifier>{aa00bea5-eac4-436a-820c-6ba6e16156e0}</UniqueIdentifier>
     </Filter>
     <Filter Include="QtLibs\armle-v7">
-      <UniqueIdentifier>{51f92549-28e1-465c-a7da-78a3237a05e3}</UniqueIdentifier>
+      <UniqueIdentifier>{66ae24c3-d6a8-4db8-aac1-30f610eecf9b}</UniqueIdentifier>
     </Filter>
     <Filter Include="QtLibs\armle-v7\platforms">
-      <UniqueIdentifier>{fc0e352b-39b8-475f-a36e-ada960a5c597}</UniqueIdentifier>
+      <UniqueIdentifier>{4fe8ad59-3522-4350-9bd8-55a81809aa0f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +57,12 @@
       <Filter>QtLibs\armle-v7\platforms</Filter>
     </None>
     <None Include="QtLibs\armle-v7\libQtOpenGL.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtGui.so">
+      <Filter>QtLibs\armle-v7</Filter>
+    </None>
+    <None Include="QtLibs\armle-v7\libQtCore.so">
       <Filter>QtLibs\armle-v7</Filter>
     </None>
     <None Include="packages.config" />
