@@ -20,20 +20,20 @@
     <Filter Include="QtLibs">
       <UniqueIdentifier>{56595ad0-0168-4aa1-9384-c863520b860a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="QtLibs\x86">
-      <UniqueIdentifier>{f39140c3-cf6e-4d1a-89a7-acaf08fef35e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="QtLibs\x86\platforms">
-      <UniqueIdentifier>{aed605f0-9d0e-486c-8fdf-8e47ea6fe18f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="QtLibs\armle-v7">
-      <UniqueIdentifier>{15082c2f-405d-4423-ae06-a3a913c9b99a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="QtLibs\armle-v7\platforms">
-      <UniqueIdentifier>{619be5aa-ed34-47a6-bd59-eeb4dbe53aac}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\moc">
       <UniqueIdentifier>{df0283a7-90e1-4cba-8c84-36ba9fea690a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\x86">
+      <UniqueIdentifier>{52bafd46-eb58-4ae0-998e-7055429f2c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\x86\platforms">
+      <UniqueIdentifier>{d0ffc04d-222c-4eb0-bd6a-92085e0cdf21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\armle-v7">
+      <UniqueIdentifier>{51f92549-28e1-465c-a7da-78a3237a05e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtLibs\armle-v7\platforms">
+      <UniqueIdentifier>{fc0e352b-39b8-475f-a36e-ada960a5c597}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,33 +57,6 @@
       <Filter>QtLibs\armle-v7\platforms</Filter>
     </None>
     <None Include="QtLibs\armle-v7\libQtOpenGL.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtGui.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtCore.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtXmlPatterns.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtSvg.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtSql.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtScript.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtNetwork.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtMultimedia.so">
-      <Filter>QtLibs\armle-v7</Filter>
-    </None>
-    <None Include="QtLibs\armle-v7\libQtDeclarative.so">
       <Filter>QtLibs\armle-v7</Filter>
     </None>
     <None Include="packages.config" />

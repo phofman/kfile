@@ -8,7 +8,9 @@ FileManager.vcxproj.user
 # temporary and final build outcomes
 Device-Debug/
 QtLibs/
-vsndk-compile-ran.flag
+Simulator-Debug/
+*.flag
+installedApps.txt
 
 # NuGet packages
 packages/

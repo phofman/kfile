@@ -27,7 +27,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <NuGetPackageImportStamp>eb3baeb6</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>e896a605</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|BlackBerry'">
     <ClCompile>
@@ -40,7 +40,6 @@
     </Link>
     <ClCompile>
       <AdditionalOptions>-Wno-psabi %(AdditionalOptions)</AdditionalOptions>
-      <UndefinePreprocessorDefinitions>WIN32;_WINDOWS;QT_BOOTSTRAPPED</UndefinePreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -48,16 +47,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="QtLibs\armle-v7\libQtCore.so" />
-    <None Include="QtLibs\armle-v7\libQtDeclarative.so" />
-    <None Include="QtLibs\armle-v7\libQtGui.so" />
-    <None Include="QtLibs\armle-v7\libQtMultimedia.so" />
-    <None Include="QtLibs\armle-v7\libQtNetwork.so" />
     <None Include="QtLibs\armle-v7\libQtOpenGL.so" />
-    <None Include="QtLibs\armle-v7\libQtScript.so" />
-    <None Include="QtLibs\armle-v7\libQtSql.so" />
-    <None Include="QtLibs\armle-v7\libQtSvg.so" />
-    <None Include="QtLibs\armle-v7\libQtXmlPatterns.so" />
     <None Include="QtLibs\armle-v7\platforms\libblackberry.so" />
     <None Include="QtLibs\x86\libQtCore.so" />
     <None Include="QtLibs\x86\libQtGui.so" />
